@@ -91,4 +91,21 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    
+    public function actionHello(){
+        $name = 'Jean';
+        return $this->render('hello', array('name'=>$name));
+    }
+    
+    public function actionUserForm()
+    {
+        $model = new UserForm;
+        
+        if($model->load(Yii::$app->request->post(()) && $model->validate()))
+            {
+            
+        }else{
+            return $this -> render ('UserForm')
+        }
+    }
 }
